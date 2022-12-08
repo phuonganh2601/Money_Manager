@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Quản lý chi tiêu</string>
+    <string name="expense">Tiêu dùng</string>
+    <string name="tv_expense">Tiêu dùng</string>
+    <string name="tv_income_title">Thu nhập</string>
+    <string name="category">Danh mục</string>
+    <string name="hello_blank_fragment">Xin chào</string>
+    <string name="amount_in_VND">Nhập vào số tiền - VND</string>
+    <string name="amount_in_USD">Nhập vào số tiền - USD</string>
+    <string name="button_input">Thêm</string>
+    <string name="button_summary">Tổng quan</string>
+    <string name="button_report">Báo cáo</string>
+    <string name="et_note">Ghi chú</string>
+    <string name="et_summary_month">Tháng</string>
+    <string name="et_summary_year">Năm</string>
+    <string name="rb_houseware">Đồ dùng</string>
+    <string name="rb_food">Thức ăn</string>
+    <string name="rb_education">Học tập</string>
+    <string name="rb_technology">Giải trí</string>
+    <string name="cb_pet">Thú cưng</string>
+    <string name="enter_button">Nhập</string>
+    <string name="rb_salary">Lương</string>
+    <string name="rb_bonus">Thưởng</string>
+    <string name="rb_investment">Đầu tư tài chính</string>
+    <string name="rb_pocket_money">Tiền tiêu vặt</string>
+    <string name="button_enter_expense">Tiêu dùng</string>
+    <string name="button_enter_income">Thu nhập</string>
+    <string name="button_summary_enter">Thống kê</string>
+    <string-array name="currencies">
+        <item>VND</item>
+        <item>USD</item>
+    </string-array>
+</resources>

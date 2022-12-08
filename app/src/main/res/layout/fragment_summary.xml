@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SummaryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp">
+
+        <EditText
+            android:id="@+id/et_summary_month"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/gray"
+            android:hint="@string/et_summary_month"
+            android:inputType="number"
+            android:textCursorDrawable="@color/gray">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/et_summary_year"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/gray"
+            android:hint="@string/et_summary_year"
+            android:inputType="number"
+            android:textCursorDrawable="@color/gray">
+
+        </EditText>
+
+        <Spinner
+            android:id="@+id/spinner_currencies"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"></Spinner>
+
+        <Button
+            android:id="@+id/button_summary_enter"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="@string/button_summary_enter"
+            android:textSize="10dp"></Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_history"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_expense_summary"
+            android:layout_width="200dp"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_income_summary"
+            android:layout_width="200dp"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pc_summary"
+        android:layout_width="match_parent"
+        android:layout_height="280dp">
+
+    </com.github.mikephil.charting.charts.PieChart>
+
+
+</LinearLayout>

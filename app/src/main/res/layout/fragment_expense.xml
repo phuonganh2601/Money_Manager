@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/expense"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/orange"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_expense_and_currency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_expense">
+
+        <EditText
+            android:id="@+id/et_expense_amount"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/orange"
+            android:inputType="number"
+            android:textCursorDrawable="@color/orange"
+            app:layout_constraintTop_toBottomOf="@id/tv_expense" />
+
+        <Spinner
+            android:id="@+id/spinner_currencies"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"></Spinner>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/orange"
+        android:hint="@string/et_note"
+        android:lines="1"
+        android:maxLines="1"
+        android:textCursorDrawable="@color/orange"
+        app:layout_constraintTop_toBottomOf="@id/ll_expense_and_currency"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <TextView
+        android:id="@+id/tv_expense_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/category"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/orange"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_note" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_category"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv_expense_category">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioGroup
+                android:id="@+id/rg_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_houseware"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_button_expense"
+                    android:checked="true"
+                    android:text="@string/rb_houseware"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/rb_food"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_button_expense"
+                    android:text="@string/rb_food"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/rb_education"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_button_expense"
+                    android:text="@string/rb_education"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/rb_technology"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_button_expense"
+                    android:text="@string/rb_technology"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/cb_pet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_button_expense"
+                    android:text="@string/cb_pet"></RadioButton>
+
+            </RadioGroup>
+        </ScrollView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/enter_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/orange"
+        android:text="@string/enter_button"
+        android:textAppearance="?android:textAppearanceMedium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_category"
+        tools:layout_editor_absoluteX="10dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

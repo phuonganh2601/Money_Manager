@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_expense"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_income_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/tv_income_title"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_income_and_currency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_income_title">
+
+        <EditText
+            android:id="@+id/et_income_amount"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/blue"
+            android:inputType="number"
+            android:textCursorDrawable="@color/blue"
+            app:layout_constraintTop_toBottomOf="@id/tv_expense" />
+
+        <Spinner
+            android:id="@+id/spinner_currencies"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"></Spinner>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_income_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/category"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_income_and_currency" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_category"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv_income_category">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioGroup
+                android:id="@+id/rg_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_salary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_button_income"
+                    android:checked="true"
+                    android:text="@string/rb_salary"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/rb_bonus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_button_income"
+                    android:text="@string/rb_bonus"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/rb_investment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_button_income"
+                    android:text="@string/rb_investment"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/rb_pocket_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_button_income"
+                    android:text="@string/rb_pocket_money"></RadioButton>
+            </RadioGroup>
+        </ScrollView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/enter_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/blue"
+        android:text="@string/enter_button"
+        android:textAppearance="?android:textAppearanceMedium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_category"
+        tools:layout_editor_absoluteX="10dp">
+
+    </Button>
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/ll_bottom_option_buttons"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:gravity="center"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent">-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/button_input_page"-->
+    <!--            android:layout_margin="10dp"-->
+    <!--            android:layout_width="150dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Input"-->
+    <!--            android:backgroundTint="@color/gray"-->
+    <!--            />-->
+    <!--        <Button-->
+    <!--            android:id="@+id/button_i_summary_page"-->
+    <!--            android:layout_margin="10dp"-->
+    <!--            android:layout_width="150dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Summary"-->
+    <!--            android:backgroundTint="@color/gray"-->
+    <!--            />-->
+    <!--    </LinearLayout>-->
+    <!--        <FrameLayout-->
+    <!--            android:id="@+id/ll_income_fragment_layout"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--        </FrameLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
